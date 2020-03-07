@@ -17,7 +17,7 @@
 
 <!-- Page Content -->
 <div class="w3-blue">
-  <button class="w3-button w3-blue w3-xlarge" onclick="w3_open()">☰ Sidebar</button>
+  <button class="w3-button w3-blue w3-xlarge" onclick="w3_open()">☰ Sidebar </button>
   <div class="w3-container">
     <!--<h1>My Page</h1>-->
   </div>
@@ -26,11 +26,12 @@
 
 <!-- Navigation -->
 <nav class="w3-bar w3-black">
-  <a href="https://robertandrei98.github.io" class="w3-button w3-bar-item">Roberto Squad</a>
+  <a href="https://robertandrei98.github.io" class="w3-button w3-bar-item">Roberto Squad </a>
 <!--  <a href="#band" class="w3-button w3-bar-item">Band</a> -->
   <a href="https://robertandrei98.github.io" class="w3-button w3-bar-item">Home</a>
   <a href="https://www.youtube.com/channel/UCyUcG_2ET2kHiaNDpkkD5yQ?view_as=subscriber" class="w3-button w3-bar-item">Youtube</a>
   <a href="https://robertandrei98.github.io" class="w3-button w3-bar-item">Contact</a>
+  <a href="https://robertandrei98.github.io" class="w3-button w3-bar-item">Test</a>
 </nav>
 
 <img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
@@ -43,8 +44,13 @@
 </a> -->
   <p>Some text here.</p>
 </div>
-
-
+<div class="w3-container w3-center">
+<p>Date/Time: <span id="datetime"></span></p>
+</div>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
 
 <script>
 function w3_open() {
