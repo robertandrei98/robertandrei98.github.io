@@ -44,6 +44,43 @@
 </a> -->
   <p>Some text here.</p>
 </div>
+
+
+
+
+<!-- PROGRES BAR -->
+
+<div class="w3-container w3-center">
+  <h2 align = "center">Dynamic Progress Bar</h2>
+
+  <div class="w3-light-grey">
+    <div id="myBar" class="w3-green" style="height:24px;width:0"></div>
+  </div>
+  <br>
+
+  <button class="w3-button w3-green " onclick="move()">Click Me</button> 
+</div>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+
+<!-- /PROGRES BAR -->
+
+<!-- DATE AND TIME -->
+
 <div class="w3-container w3-center">
 <p>Date/Time: <span id="datetime"></span></p>
 </div>
@@ -51,6 +88,8 @@
 var dt = new Date();
 document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 </script>
+
+<!-- /DATE AND TIME -->
 
 <script>
 function w3_open() {
